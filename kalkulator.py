@@ -1,0 +1,1 @@
+Przechodzeniem do strony internetowej moje pamiętnik nazywa mnie bardzo doskonało panu Pawel Wojdyńskim, chyba jednak dopiero od tego wzoru.
