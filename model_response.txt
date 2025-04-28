@@ -1,24 +1,18 @@
-Zadanie jest juz rozwiązane wcześniej, ale chodziłoby to na rysunku i nazwy zainstalowanych plików dla konferencji. Poniżej znajduje się sformatowana struktura folderów wraz ze skróconym opisem, a także punktami dokładonymi:
-
-```text 
-Projekt_TODO/   # nazwa projektu (np. "ZestawAplikacji")
-    ├── README.md    # Plik z informacją o projekcie i autorsach utworów originalnych 
-    |               <-- Dodano też pliki dokumentacyjne dotyczące nazwy projektu oraz autorazy.     
-    ├── .gitignore    # Plik zawierający skrócone nazwy plików i folderi, które chcieliby być przecieżniane w czasie rozgrywkach.
-    ├── requirements.txt    # Plik zawierający listę wymaganych pakietów do uruchomienia projektu, aby ułatwić instalacje i inne potrzebne elementy. 
-    |                          <-- Zaimportowane są one tylko niezbędne pliki dla naszych zadaniach na koncie (np.: flask, pytest).  
-    ├── src/            # Plik stworzony przez programistę do wykonywania biznesowego. 
-    |                   # Katalogi to: models/, services/, api/. i tests/. Nazwy plików powinny zaczynać od "main_" albo słowa kluczowe dla tej nazwy, np.: main_models_, main_services_.
-    │   ├── __init__.py   # Plik stały do celu wstrzyknięcia modułów zawartych we wspólnym miejscem przez całe środowisko Pythoniczne
-    │   ├── models/        # Katalogiem stanowi listę modeli biznesowej, takich jak UserModel i TodoList. 
-    |                   # Plik powinien zawierać pliki main_models_.py dla tej nazwy (np.: from .main import models) oraz wszystkie modeli biznesowej, które są potrzebne.
-    │   ├── services/      # Katalogiem stanowi listę usług biznesowych (np: user_services), takich jak getUser i createTodoList 
-    |                   # Plik powinien zawierać pliki main_services_.py dla tej nazwy oraz wszystkie serwisy, które są potrzebne.  
-    │   ├── api/           # Katalogiem stanowi listę ścisłych plików API (np: user_api i todoList_api), takich jak getUserAPI oraz createTodoApi 
-    |                   # Plik powinien zawierać wszystkie punkty wejścia do napisanej aplikacji API, które są potrzebne.  
-    │   └── tests/         # Katalogiem stanowi listę pliku test_main (do znalezienia wszystkich punktach wejścia do napisanej aplikacji),  takich jak:
-    |                   # Plik powinien pochodzić od "test/conftest.py" i będzie zawierały wszystkimi testami, którymi są potrzebne (np.: from .main import tests)
-    └── main_.py          # Główny plik aplikacji do uruchomienia całego projektu. 
-                           # Zawiera wszystkie inicjatywy biznesowe (np.: importing models, services or api), takie jak: from .models import * ,from ..services imort etc..  
-```    
-Następnie możemy zapisać nasze pliki w odpowiednich miejscach. Na przykład, `main_api_.py` będzie kontynuował się na temat uzyskiwania dostępu do API i tworzenia nowych list todo (np.: from .models import UserModel ,from ..services.userServices import createTodoList).
+## Zadanie 1 - Stwórz aplikację do zarządzania zadanami w Pythonie ##
+Poniżej znajduje się podstawowy projekt, który można użyć jako punkt początkowy. Niniejszy plik ma odebrane kilka właściwych informacji i następujące polecenia, aby zainstalować potrzebne moduły:
+```python
+pip install flask Flask-SQLAlchemy pymysql  # dla bazy MySQL/MariaDB jako SQLite lub PostgreSQl. Aby używać innej, wpisz nazwę serwera i połączenie z databasem
+pip install -r requirements.txt  # Instalowanie potrzebnych modułów przy pomocci pliku "requirements.txt"
+```  
+Następnie możesz uruchomić aplikację w trybie debuggowania, użycie SQLite lub PostgreSQl: 
+```python
+export FLASK_APP=app.py     # Dla Flask (wersji Python) jako środowiska pracy zabezpieczającego i współdziałującym na porcie localhost:5000
+flask run                    # Uruchomieniu aplikacjii flasu. Wersja Python jest domyślnie zastosowana dla Flask, czyli najbardziej skuteczna i przeznaczone do produkcji
+```  
+Zadaniu w tym maksymalnie możemy ograniczyć się zakres aplikowania, którym jest potrzebny projekt i zaangażdanych plikach. Oto kilka punktów nauczania dla Was:
+- Tworzenie modeli do reprezentacji bazy danych (np User, Task). Wszystkim wymagane jest ustawienie środowiska dewelopmentalnego. Ustaw zmian dotyczących pliku settings/development_settings
+- Dodanie autentykacji użytkownika i innego wymaganej do aplikacji (np przez logowanie). Załóż kluczy zabezpieczeni dla poziomu API, obrótki tajne są one następnie ustawiane w plikach.
+- Tworzenie środowisko do testowań (np TestingSettings). Załóż zmiennych i jakimiś konfiguracjami dla tego środowiska, a następnie ustaw ten w pliku.
+- Tworzenie serwera do proponowanej rozwiązaniu oraz interfejs API zwracać bardzo podstawyczny schemat dla tego środowiska, za którym moglibśmy narzuci.
+- Pamiętaj o wszelkich potrzebach statycznych (np CSS i JavaScript). Dodatkowa logika biznesowa powinna być istotnym zadaniem, a także nie musimy stosować na szablonach.
+- Zawsze sprawdzi poprawność tych prób w katalogu tests jako materiał do odpowiednich testów dla proponowanego rozwiązania, a nie powinna ona być zmodyfikowana.
