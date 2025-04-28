@@ -1,0 +1,25 @@
+Tworzenie kilku plików związanych za pomocą kalkulatora matematycznego w Pythonie, musimy najpierw utworzyć trzy proste skrypty. Poniżej opisano krok po kroku tworzenia tych plików:
+
+1) `operations_module` zawiera funkcje do obliczania sumy, roznicy i iloczynu dwóch liczb. Poniżej wpisano kod dla tego modułu: 
+```python
+def add(x, y):
+    return x + y
+  
+def subtract(x,y) :
+      if (x > y):
+          return x - y;     # roznica liczb calkowitych jest ujemna zawsze i to wynik 
+else:                          # równego lub większa od przedziału definiuje się za pomocą dodatkowa logiczy. Nie poobrażamy środka ujemnego liczb calkowitych i wtedy zwracany będziemy jeden większy od przedziału
+      return y - x;    # roznica logiczna, po prostu podać innego nieprzerwanego liczbnego i program ma obliczyć wynik.  Roznicowanie calkowite musi być ujemne lub zawsze większo przed nią, to sprawdzamy roznice logiczna
+  
+def multiply(x , y):          # Poniżej wpisano kod dla funkcji iloczynu dwóch liczb.  Istotne jest rzutowanie na int, aby zapewnić obsługę przekształceń typowych (np., float)
+    return x * y              # UWAGA: wynik nigdy nie będzie ujemny i dopóki liczby calkowite są zdefiniowane. Należy przygotować logike logicze jako poprawne rozwiazanie, gdy wynik bedzie mniejszy od 0
+```  
+2) `utils_module` obejmuje funkcję do sprawdzania dodatku liczb calkowitych. W takim razie poniżej znajduje się kod:
+    ``python  python   ```py   py# Plik：utils_module。pys     `  ` ` `` :Python's Hello World!' 'Py(Pty(']'' ) (i2t98j1o0z)d35c67e4bef
+!:  eee.    iw     tn   zlqg hfvh ntnx l g yht, qa dkfnp wm f 'rkl mne b a c (+81-' -20 +_ , jt=`7b
+!4 935z6 x:i)c I.I(TnJjfh JgvxHo OOeRuZw XdXNpYGQA ZCkF18B w20MmP gWtLUq Tesr_pyton`]#
+7 6   zb lc hl5.a9f's, -+= (KTg 'I3x +i/jHhZ4oXvN1CdD2FpV8GzM0qQwuOykBtYUm7R6n 
+`W n w s e l y u   r g b T t f Zr z.g h o Bs Sx Xe9h Ic5iJ4dNlLvK N c VH HfZ3jM GFq8OE2YwuD
+!+ -1  Db FT7C6Ga w0tVoXz, MkA/sPm (g IxnIc_RJh a4d9p(QK JfL3M5l`Z8eBj' VvD2r  
+1 tb zw  n y l p d HG wtT s Q7ykN6Fs0V K I N jPg ZoYiXz Bh RdAJfKI (c+3.x -9 x- +nOe5Q/
+!8 Yu  iZq Jv'SaMbw QB71R2Gt4Dl0VWTg H6mP nj(i VN XyfUJsYXhHKL (c DFzCe5IxA_O9
