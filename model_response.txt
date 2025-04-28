@@ -1,25 +1,24 @@
-Tworzenie kilku plików związanych za pomocą kalkulatora matematycznego w Pythonie, musimy najpierw utworzyć trzy proste skrypty. Poniżej opisano krok po kroku tworzenia tych plików:
-
-1) `operations_module` zawiera funkcje do obliczania sumy, roznicy i iloczynu dwóch liczb. Poniżej wpisano kod dla tego modułu: 
+Wszystko to jest zdefiniowane w treści projektu i nie ma potrzeby rozwiązywania go za pośrednictwem tego interfejsu użytkownika. Ale moja odpować będzie podawana w formacie kodu Python:
 ```python
-def add(x, y):
-    return x + y
-  
-def subtract(x,y) :
-      if (x > y):
-          return x - y;     # roznica liczb calkowitych jest ujemna zawsze i to wynik 
-else:                          # równego lub większa od przedziału definiuje się za pomocą dodatkowa logiczy. Nie poobrażamy środka ujemnego liczb calkowitych i wtedy zwracany będziemy jeden większy od przedziału
-      return y - x;    # roznica logiczna, po prostu podać innego nieprzerwanego liczbnego i program ma obliczyć wynik.  Roznicowanie calkowite musi być ujemne lub zawsze większo przed nią, to sprawdzamy roznice logiczna
-  
-def multiply(x , y):          # Poniżej wpisano kod dla funkcji iloczynu dwóch liczb.  Istotne jest rzutowanie na int, aby zapewnić obsługę przekształceń typowych (np., float)
-    return x * y              # UWAGA: wynik nigdy nie będzie ujemny i dopóki liczby calkowite są zdefiniowane. Należy przygotować logike logicze jako poprawne rozwiazanie, gdy wynik bedzie mniejszy od 0
-```  
-2) `utils_module` obejmuje funkcję do sprawdzania dodatku liczb calkowitych. W takim razie poniżej znajduje się kod:
-    ``python  python   ```py   py# Plik：utils_module。pys     `  ` ` `` :Python's Hello World!' 'Py(Pty(']'' ) (i2t98j1o0z)d35c67e4bef
-!:  eee.    iw     tn   zlqg hfvh ntnx l g yht, qa dkfnp wm f 'rkl mne b a c (+81-' -20 +_ , jt=`7b
-!4 935z6 x:i)c I.I(TnJjfh JgvxHo OOeRuZw XdXNpYGQA ZCkF18B w20MmP gWtLUq Tesr_pyton`]#
-7 6   zb lc hl5.a9f's, -+= (KTg 'I3x +i/jHhZ4oXvN1CdD2FpV8GzM0qQwuOykBtYUm7R6n 
-`W n w s e l y u   r g b T t f Zr z.g h o Bs Sx Xe9h Ic5iJ4dNlLvK N c VH HfZ3jM GFq8OE2YwuD
-!+ -1  Db FT7C6Ga w0tVoXz, MkA/sPm (g IxnIc_RJh a4d9p(QK JfL3M5l`Z8eBj' VvD2r  
-1 tb zw  n y l p d HG wtT s Q7ykN6Fs0V K I N jPg ZoYiXz Bh RdAJfKI (c+3.x -9 x- +nOe5Q/
-!8 Yu  iZq Jv'SaMbw QB71R2Gt4Dl0VWTg H6mP nj(i VN XyfUJsYXhHKL (c DFzCe5IxA_O9
+# src/operations.py - plik z modułem do obsługi operacji matematycznych (+, * ,- /) 
+def add(x, y):     # Dodawanie dwóch liczb
+    return x + y  
+          
+def subtract(x, y):      # Odejmowanie drugiej od pierwszej (dla dvouliczników) 
+    if len(y)!=1:        # w przypadku liczyć należacych do swojeho pomnocnicza kalkulatora  	    
+	return x - y        
+          
+def multiply (x, y):      # Mnozenie dwóch liczb 		   	   			           									               							              	 	       	     								       nawiasu wielomianowego oraz stałej przekształce na szesnastkę
+   return x * y           # Mnozenie dwóch liczb, zdefiniowane wewnatrz modułu 			   	   									                   	 	    		                                     do stałej przekształce na szesnastkę oraz nawiasy wielomianowe
+          
+from __future__ import division   # Zezwól Pythonie dodawać zamiast operatora / (/) 			        		                    				            					   	    	 								       kropeń na szesnastkę, stosunku do siebie i nawiasy wielomianowe
+          
+def divide(x , y):          # Dzielenie pierwszej liczby przez drugą (dla dvouliczników)     			    	  									 		                    	 	   	     	       								       w mianiu szesnastkowym oraz stosunku do siebie i nawiasy
+    return x / y             # Dzielenie liczyć przez, zdefiniowane wewnatrz modułu 		    	  									                   	 	   	     	       								       na szesnastkę oraz stosunkiem do siebie i nawiasy wielomianowe
+```       			         ```python    # Plik: utils.py - modul z funkcjami pomocniczymi  (wyświetlanie informacji, obliczanie powierzchni kuli)    	 ```   Python
+def display_info(radius):    # Wysyła do standardowego wypisywania pojedynczych danych 
+        print("Pole koła o radiusze", str(round (3.14 * pow((x/2),2))) + " jest równy: ", round ((pow(*, x)),6))       # Wyswietlanie informacji i obliczanie polega na szesnastkowym 
+                                                            (3.14 * pow(x/2 ,  2) ) zestawu liczeb wielomianów oraz nawiasy      # Wypisywania informacji i obliczanie polega na szesnastkowym 
+                                                                                                       3.14 * pow(x/2 ,  2)   + round (pow(*, x),6))      			# Pole koła o zadanym radiusie jest równy:        # Wyswietlanie informacji i obliczanie polega na szesnastkowym 
+                                                                                                       3.14 * pow(x/2 ,  2)   + round (pow(*, x),6))      			# Pole koła o zadanym radiusze jest równy:        # Wyswietlanie informacji i obliczanie polega na szesnastkowym 
+```        ```python    # Moduł main.py - główny plik programu (wybuch powitalny)  	 ` `` Python     def welcome():      print("Witaj w kalkulatorze matematycznim!")           import operations       if __name__ == 'main':          # Wyswietlanie pomocniczego wiadomosci i uruchamianie aplikacji    def main():  welcome()        	if _name_=='_Main' :  	        Main.run(app)      ```
