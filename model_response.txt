@@ -1,24 +1,21 @@
-Wszystko to jest zdefiniowane w treści projektu i nie ma potrzeby rozwiązywania go za pośrednictwem tego interfejsu użytkownika. Ale moja odpować będzie podawana w formacie kodu Python:
-```python
-# src/operations.py - plik z modułem do obsługi operacji matematycznych (+, * ,- /) 
-def add(x, y):     # Dodawanie dwóch liczb
-    return x + y  
-          
-def subtract(x, y):      # Odejmowanie drugiej od pierwszej (dla dvouliczników) 
-    if len(y)!=1:        # w przypadku liczyć należacych do swojeho pomnocnicza kalkulatora  	    
-	return x - y        
-          
-def multiply (x, y):      # Mnozenie dwóch liczb 		   	   			           									               							              	 	       	     								       nawiasu wielomianowego oraz stałej przekształce na szesnastkę
-   return x * y           # Mnozenie dwóch liczb, zdefiniowane wewnatrz modułu 			   	   									                   	 	    		                                     do stałej przekształce na szesnastkę oraz nawiasy wielomianowe
-          
-from __future__ import division   # Zezwól Pythonie dodawać zamiast operatora / (/) 			        		                    				            					   	    	 								       kropeń na szesnastkę, stosunku do siebie i nawiasy wielomianowe
-          
-def divide(x , y):          # Dzielenie pierwszej liczby przez drugą (dla dvouliczników)     			    	  									 		                    	 	   	     	       								       w mianiu szesnastkowym oraz stosunku do siebie i nawiasy
-    return x / y             # Dzielenie liczyć przez, zdefiniowane wewnatrz modułu 		    	  									                   	 	   	     	       								       na szesnastkę oraz stosunkiem do siebie i nawiasy wielomianowe
-```       			         ```python    # Plik: utils.py - modul z funkcjami pomocniczymi  (wyświetlanie informacji, obliczanie powierzchni kuli)    	 ```   Python
-def display_info(radius):    # Wysyła do standardowego wypisywania pojedynczych danych 
-        print("Pole koła o radiusze", str(round (3.14 * pow((x/2),2))) + " jest równy: ", round ((pow(*, x)),6))       # Wyswietlanie informacji i obliczanie polega na szesnastkowym 
-                                                            (3.14 * pow(x/2 ,  2) ) zestawu liczeb wielomianów oraz nawiasy      # Wypisywania informacji i obliczanie polega na szesnastkowym 
-                                                                                                       3.14 * pow(x/2 ,  2)   + round (pow(*, x),6))      			# Pole koła o zadanym radiusie jest równy:        # Wyswietlanie informacji i obliczanie polega na szesnastkowym 
-                                                                                                       3.14 * pow(x/2 ,  2)   + round (pow(*, x),6))      			# Pole koła o zadanym radiusze jest równy:        # Wyswietlanie informacji i obliczanie polega na szesnastkowym 
-```        ```python    # Moduł main.py - główny plik programu (wybuch powitalny)  	 ` `` Python     def welcome():      print("Witaj w kalkulatorze matematycznim!")           import operations       if __name__ == 'main':          # Wyswietlanie pomocniczego wiadomosci i uruchamianie aplikacji    def main():  welcome()        	if _name_=='_Main' :  	        Main.run(app)      ```
+Wystarczętnie, aby włączyć kilka funkcjonalności podczas tworzenia projektu kalkulatora oraz odpowiadać na pytania znajdujące się poza tym tematem. Poniżej przedstawiono kilka sposobów, w jaki można skoncentrować swoje luki:
+
+**Projekt Kalkulatora - Wersja 1 (oprogramowana z użyciem bibliotek matematycznych Python) **  
+Zakres to dodawanie, odejmowanie i mnożenie liczb rzeczywistych. Dzielenie dokładne oblicza z użyciem funkcji `decimal` lub Python 3 dostępnyczego w bibliotece math (np., np: division(10,5)).
+  
+Struktura katalogu i pliki poinformują się następująco:   
+```plaintext 
+my_calculator/                   # Katalog glowny projektu. 
+│ README.md                     # Informacje o autorskimi danych i obiektach docstring w pliku Readme.  
+├── setup.py                    # Ustawienia programu do uruchomienia bezpośrednio z biblioteki Python       . 
+└── src/                       # Katalog główny projektu, w którym skasowane są pliki źródłowe.  
+    ├── __init__.py              # Wstępny plik do uruchomienia jako punkt wejścia dla biblioteki Python, bez wymaganego przez niego `import *` . 
+    └── calculator_operations.py    # Zawiera klasy i metody matematyczne do zrealizowania operacji (dodawanie/odejmowanie, mnozenia...).  
+```     
+**Projekt Kalkulatora - Wersja 2: Opercje liczbowe pryma w Pythonii **   
+Zakres to dodatkowa obsługa operacji na typach rzeczywistych. Należę do nich np.: IntType, Float type oraz Obliczenia matematyczne (np., sqrt - pierwiastki kwadratowe)   
+   Jako wersja zbiorowa: rozszerza się funkcjonalność na typu rzeczywistego i obsługa operacji matematycznych (dodawanie, odejmowanie/odejmownienia kontrarazywalnego).
+   Struktura: – w zależności od rodzaju liczb rzeczywistych to potrzebuje dodatkowego pliku. Uważamy, że powinien być co najmniej jeden dokumentujony w katalogu `src/` .
+   Do tego: – Dokonanie bardzo podobnych zadaniom na dodatkowych typach liczb rzeczywistych. Wszystko powinno być obsługiwane w pliku `calculator_mathematical_operations` .
+   Informacje o nazwy i autorsze znajdują się wewnatrz każdego pliku docstring, a także na stronie README.md w celu ułatwienia projektowanie dokumentacyjne dla klientów i odbiorcy.
+   Informacje należę zamieszczająć pod sobą: – setup.py, src/ __init__ . py oraz pliki README (oprócz sformatowanych źródła), tak jako by wszyscy musieli mieć odpowiednich nagłówków i dokumentacji.
