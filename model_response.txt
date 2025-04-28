@@ -1,1 +1,24 @@
-Moja odpowiedz to zadanie stosując w Pythonie dobrych struktur katalogów i potraktuję rygoryzację operacyjną matematyczną. W takim przypadku, tworzeniem nowego projektu nazywanego "Advanced Calculator" zbieram podstawowe elementy dobrze przygotowane struktury katalogów oraz potraktuję rygoryzaść operacji matematycznych w ramach naszego projektu.
+Zadanie jest juz rozwiązane wcześniej, ale chodziłoby to na rysunku i nazwy zainstalowanych plików dla konferencji. Poniżej znajduje się sformatowana struktura folderów wraz ze skróconym opisem, a także punktami dokładonymi:
+
+```text 
+Projekt_TODO/   # nazwa projektu (np. "ZestawAplikacji")
+    ├── README.md    # Plik z informacją o projekcie i autorsach utworów originalnych 
+    |               <-- Dodano też pliki dokumentacyjne dotyczące nazwy projektu oraz autorazy.     
+    ├── .gitignore    # Plik zawierający skrócone nazwy plików i folderi, które chcieliby być przecieżniane w czasie rozgrywkach.
+    ├── requirements.txt    # Plik zawierający listę wymaganych pakietów do uruchomienia projektu, aby ułatwić instalacje i inne potrzebne elementy. 
+    |                          <-- Zaimportowane są one tylko niezbędne pliki dla naszych zadaniach na koncie (np.: flask, pytest).  
+    ├── src/            # Plik stworzony przez programistę do wykonywania biznesowego. 
+    |                   # Katalogi to: models/, services/, api/. i tests/. Nazwy plików powinny zaczynać od "main_" albo słowa kluczowe dla tej nazwy, np.: main_models_, main_services_.
+    │   ├── __init__.py   # Plik stały do celu wstrzyknięcia modułów zawartych we wspólnym miejscem przez całe środowisko Pythoniczne
+    │   ├── models/        # Katalogiem stanowi listę modeli biznesowej, takich jak UserModel i TodoList. 
+    |                   # Plik powinien zawierać pliki main_models_.py dla tej nazwy (np.: from .main import models) oraz wszystkie modeli biznesowej, które są potrzebne.
+    │   ├── services/      # Katalogiem stanowi listę usług biznesowych (np: user_services), takich jak getUser i createTodoList 
+    |                   # Plik powinien zawierać pliki main_services_.py dla tej nazwy oraz wszystkie serwisy, które są potrzebne.  
+    │   ├── api/           # Katalogiem stanowi listę ścisłych plików API (np: user_api i todoList_api), takich jak getUserAPI oraz createTodoApi 
+    |                   # Plik powinien zawierać wszystkie punkty wejścia do napisanej aplikacji API, które są potrzebne.  
+    │   └── tests/         # Katalogiem stanowi listę pliku test_main (do znalezienia wszystkich punktach wejścia do napisanej aplikacji),  takich jak:
+    |                   # Plik powinien pochodzić od "test/conftest.py" i będzie zawierały wszystkimi testami, którymi są potrzebne (np.: from .main import tests)
+    └── main_.py          # Główny plik aplikacji do uruchomienia całego projektu. 
+                           # Zawiera wszystkie inicjatywy biznesowe (np.: importing models, services or api), takie jak: from .models import * ,from ..services imort etc..  
+```    
+Następnie możemy zapisać nasze pliki w odpowiednich miejscach. Na przykład, `main_api_.py` będzie kontynuował się na temat uzyskiwania dostępu do API i tworzenia nowych list todo (np.: from .models import UserModel ,from ..services.userServices import createTodoList).
